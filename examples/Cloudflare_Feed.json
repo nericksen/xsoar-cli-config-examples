@@ -1,1 +1,302 @@
-{"name": "placeholder", "id": "", "engine": "", "engineGroup": "", "defaultIgnore": false, "configuration": {"sortValues": null, "display": "Cloudflare Feed", "canGetSamples": true, "brand": "", "shouldCommit": false, "hidden": false, "fromServerVersion": "", "propagationLabels": [], "name": "Cloudflare Feed", "vcShouldKeepItemLegacyProdMachine": false, "system": true, "commitMessage": "", "vcShouldIgnore": false, "packPropagationLabels": ["all"], "configuration": [{"display": "Services", "name": "url", "options": ["https://www.cloudflare.com/ips-v4", "https://www.cloudflare.com/ips-v6"], "required": true, "type": 16, "value": ["https://www.cloudflare.com/ips-v4"]}, {"defaultvalue": "true", "display": "Fetch indicators", "name": "feed", "required": false, "type": 8, "value": "true"}, {"additionalinfo": "Indicators from this integration instance will be marked with this reputation", "defaultvalue": "Good", "display": "Indicator Reputation", "name": "feedReputation", "options": ["None", "Good", "Suspicious", "Bad"], "required": false, "type": 18, "value": "Good"}, {"additionalinfo": "Reliability of the source providing the intelligence data", "defaultvalue": "A - Completely reliable", "display": "Source Reliability", "name": "feedReliability", "options": ["A - Completely reliable", "B - Usually reliable", "C - Fairly reliable", "D - Not usually reliable", "E - Unreliable", "F - Reliability cannot be judged"], "required": true, "type": 15, "value": "A - Completely reliable"}, {"defaultvalue": "indicatorType", "display": "", "name": "feedExpirationPolicy", "options": ["never", "interval", "indicatorType", "suddenDeath"], "required": false, "type": 17, "value": "indicatorType"}, {"defaultvalue": "20160", "display": "", "name": "feedExpirationInterval", "required": false, "type": 1, "value": "20160"}, {"defaultvalue": "5", "display": "Feed Fetch Interval", "name": "feedFetchInterval", "required": false, "type": 19, "value": "5"}, {"additionalinfo": "When selected, the exclusion list is ignored for indicators from this feed. This means that if an indicator from this feed is on the exclusion list, the indicator might still be added to the system.", "display": "Bypass exclusion list", "name": "feedBypassExclusionList", "required": false, "type": 8, "defaultvalue": "true", "value": "true"}, {"additionalinfo": "Timeout of the polling request in seconds.", "defaultvalue": "20", "display": "Request Timeout", "name": "polling_timeout", "required": false, "type": 0, "value": "20"}, {"additionalinfo": "Supports CSV values.", "display": "Tags", "name": "feedTags", "required": false, "type": 0, "value": "allow"}], "version": 1, "icon": "", "toServerVersion": "", "id": "Cloudflare Feed", "image": "", "description": "Use the Cloudflare feed integration to fetch indicators from the feed.", "category": "Data Enrichment & Threat Intelligence", "integrationScript": {"isRemoteSyncOut": false, "longRunning": false, "commands": [{"arguments": [{"default": false, "defaultValue": "50", "description": "The maximum number of results to return. The default value is 50.", "isArray": false, "name": "limit", "required": false, "secret": false}], "deprecated": false, "description": "Gets the feed indicators.", "execution": false, "name": "cloudflare-get-indicators"}], "longRunningPortMapping": false, "isFetchCredentials": false, "runOnce": false, "isRemoteSyncIn": false, "isFetch": false, "isMappable": false, "isFetchSamples": false, "subtype": "", "type": "python", "feed": false}, "instances": []}, "enabled": "true", "propagationLabels": ["all"], "data": [{"display": "Services", "name": "url", "options": ["https://www.cloudflare.com/ips-v4", "https://www.cloudflare.com/ips-v6"], "required": true, "type": 16, "value": ["https://www.cloudflare.com/ips-v4"]}, {"defaultvalue": "true", "display": "Fetch indicators", "name": "feed", "required": false, "type": 8, "value": "true"}, {"additionalinfo": "Indicators from this integration instance will be marked with this reputation", "defaultvalue": "Good", "display": "Indicator Reputation", "name": "feedReputation", "options": ["None", "Good", "Suspicious", "Bad"], "required": false, "type": 18, "value": "Good"}, {"additionalinfo": "Reliability of the source providing the intelligence data", "defaultvalue": "A - Completely reliable", "display": "Source Reliability", "name": "feedReliability", "options": ["A - Completely reliable", "B - Usually reliable", "C - Fairly reliable", "D - Not usually reliable", "E - Unreliable", "F - Reliability cannot be judged"], "required": true, "type": 15, "value": "A - Completely reliable"}, {"defaultvalue": "indicatorType", "display": "", "name": "feedExpirationPolicy", "options": ["never", "interval", "indicatorType", "suddenDeath"], "required": false, "type": 17, "value": "indicatorType"}, {"defaultvalue": "20160", "display": "", "name": "feedExpirationInterval", "required": false, "type": 1, "value": "20160"}, {"defaultvalue": "5", "display": "Feed Fetch Interval", "name": "feedFetchInterval", "required": false, "type": 19, "value": "5"}, {"additionalinfo": "When selected, the exclusion list is ignored for indicators from this feed. This means that if an indicator from this feed is on the exclusion list, the indicator might still be added to the system.", "display": "Bypass exclusion list", "name": "feedBypassExclusionList", "required": false, "type": 8, "defaultvalue": "true", "value": "true"}, {"additionalinfo": "Timeout of the polling request in seconds.", "defaultvalue": "20", "display": "Request Timeout", "name": "polling_timeout", "required": false, "type": 0, "value": "20"}, {"additionalinfo": "Supports CSV values.", "display": "Tags", "name": "feedTags", "required": false, "type": 0, "value": "allow"}], "brand": "Cloudflare Feed", "canSample": true, "category": "Data Enrichment & Threat Intelligence", "version": 1, "isIntegrationScript": true, "isLongRunning": false, "passwordProtected": false, "mappingId": "", "incomingMapperId": "", "outgoingMapperId": ""}
+{
+    "name": "placeholder",
+    "id": "",
+    "engine": "",
+    "engineGroup": "",
+    "defaultIgnore": false,
+    "configuration": {
+        "sortValues": null,
+        "display": "Cloudflare Feed",
+        "canGetSamples": true,
+        "brand": "",
+        "shouldCommit": false,
+        "hidden": false,
+        "fromServerVersion": "",
+        "propagationLabels": [],
+        "name": "Cloudflare Feed",
+        "vcShouldKeepItemLegacyProdMachine": false,
+        "system": true,
+        "commitMessage": "",
+        "vcShouldIgnore": false,
+        "packPropagationLabels": [
+            "all"
+        ],
+        "configuration": [
+            {
+                "display": "Services",
+                "name": "url",
+                "options": [
+                    "https://www.cloudflare.com/ips-v4",
+                    "https://www.cloudflare.com/ips-v6"
+                ],
+                "required": true,
+                "type": 16,
+                "value": [
+                    "https://www.cloudflare.com/ips-v4"
+                ]
+            },
+            {
+                "defaultvalue": "true",
+                "display": "Fetch indicators",
+                "name": "feed",
+                "required": false,
+                "type": 8,
+                "value": "true"
+            },
+            {
+                "additionalinfo": "Indicators from this integration instance will be marked with this reputation",
+                "defaultvalue": "Good",
+                "display": "Indicator Reputation",
+                "name": "feedReputation",
+                "options": [
+                    "None",
+                    "Good",
+                    "Suspicious",
+                    "Bad"
+                ],
+                "required": false,
+                "type": 18,
+                "value": "Good"
+            },
+            {
+                "additionalinfo": "Reliability of the source providing the intelligence data",
+                "defaultvalue": "A - Completely reliable",
+                "display": "Source Reliability",
+                "name": "feedReliability",
+                "options": [
+                    "A - Completely reliable",
+                    "B - Usually reliable",
+                    "C - Fairly reliable",
+                    "D - Not usually reliable",
+                    "E - Unreliable",
+                    "F - Reliability cannot be judged"
+                ],
+                "required": true,
+                "type": 15,
+                "value": "A - Completely reliable"
+            },
+            {
+                "defaultvalue": "indicatorType",
+                "display": "",
+                "name": "feedExpirationPolicy",
+                "options": [
+                    "never",
+                    "interval",
+                    "indicatorType",
+                    "suddenDeath"
+                ],
+                "required": false,
+                "type": 17,
+                "value": "indicatorType"
+            },
+            {
+                "defaultvalue": "20160",
+                "display": "",
+                "name": "feedExpirationInterval",
+                "required": false,
+                "type": 1,
+                "value": "20160"
+            },
+            {
+                "defaultvalue": "5",
+                "display": "Feed Fetch Interval",
+                "name": "feedFetchInterval",
+                "required": false,
+                "type": 19,
+                "value": "5"
+            },
+            {
+                "additionalinfo": "When selected, the exclusion list is ignored for indicators from this feed. This means that if an indicator from this feed is on the exclusion list, the indicator might still be added to the system.",
+                "display": "Bypass exclusion list",
+                "name": "feedBypassExclusionList",
+                "required": false,
+                "type": 8,
+                "defaultvalue": "true",
+                "value": "true"
+            },
+            {
+                "additionalinfo": "Timeout of the polling request in seconds.",
+                "defaultvalue": "20",
+                "display": "Request Timeout",
+                "name": "polling_timeout",
+                "required": false,
+                "type": 0,
+                "value": "20"
+            },
+            {
+                "additionalinfo": "Supports CSV values.",
+                "display": "Tags",
+                "name": "feedTags",
+                "required": false,
+                "type": 0,
+                "value": "allow"
+            }
+        ],
+        "version": 1,
+        "icon": "",
+        "toServerVersion": "",
+        "id": "Cloudflare Feed",
+        "image": "",
+        "description": "Use the Cloudflare feed integration to fetch indicators from the feed.",
+        "category": "Data Enrichment & Threat Intelligence",
+        "integrationScript": {
+            "isRemoteSyncOut": false,
+            "longRunning": false,
+            "commands": [
+                {
+                    "arguments": [
+                        {
+                            "default": false,
+                            "defaultValue": "50",
+                            "description": "The maximum number of results to return. The default value is 50.",
+                            "isArray": false,
+                            "name": "limit",
+                            "required": false,
+                            "secret": false
+                        }
+                    ],
+                    "deprecated": false,
+                    "description": "Gets the feed indicators.",
+                    "execution": false,
+                    "name": "cloudflare-get-indicators"
+                }
+            ],
+            "longRunningPortMapping": false,
+            "isFetchCredentials": false,
+            "runOnce": false,
+            "isRemoteSyncIn": false,
+            "isFetch": false,
+            "isMappable": false,
+            "isFetchSamples": false,
+            "subtype": "",
+            "type": "python",
+            "feed": false
+        },
+        "instances": []
+    },
+    "enabled": "true",
+    "propagationLabels": [
+        "all"
+    ],
+    "data": [
+        {
+            "display": "Services",
+            "name": "url",
+            "options": [
+                "https://www.cloudflare.com/ips-v4",
+                "https://www.cloudflare.com/ips-v6"
+            ],
+            "required": true,
+            "type": 16,
+            "value": [
+                "https://www.cloudflare.com/ips-v4"
+            ]
+        },
+        {
+            "defaultvalue": "true",
+            "display": "Fetch indicators",
+            "name": "feed",
+            "required": false,
+            "type": 8,
+            "value": "true"
+        },
+        {
+            "additionalinfo": "Indicators from this integration instance will be marked with this reputation",
+            "defaultvalue": "Good",
+            "display": "Indicator Reputation",
+            "name": "feedReputation",
+            "options": [
+                "None",
+                "Good",
+                "Suspicious",
+                "Bad"
+            ],
+            "required": false,
+            "type": 18,
+            "value": "Good"
+        },
+        {
+            "additionalinfo": "Reliability of the source providing the intelligence data",
+            "defaultvalue": "A - Completely reliable",
+            "display": "Source Reliability",
+            "name": "feedReliability",
+            "options": [
+                "A - Completely reliable",
+                "B - Usually reliable",
+                "C - Fairly reliable",
+                "D - Not usually reliable",
+                "E - Unreliable",
+                "F - Reliability cannot be judged"
+            ],
+            "required": true,
+            "type": 15,
+            "value": "A - Completely reliable"
+        },
+        {
+            "defaultvalue": "indicatorType",
+            "display": "",
+            "name": "feedExpirationPolicy",
+            "options": [
+                "never",
+                "interval",
+                "indicatorType",
+                "suddenDeath"
+            ],
+            "required": false,
+            "type": 17,
+            "value": "indicatorType"
+        },
+        {
+            "defaultvalue": "20160",
+            "display": "",
+            "name": "feedExpirationInterval",
+            "required": false,
+            "type": 1,
+            "value": "20160"
+        },
+        {
+            "defaultvalue": "5",
+            "display": "Feed Fetch Interval",
+            "name": "feedFetchInterval",
+            "required": false,
+            "type": 19,
+            "value": "5"
+        },
+        {
+            "additionalinfo": "When selected, the exclusion list is ignored for indicators from this feed. This means that if an indicator from this feed is on the exclusion list, the indicator might still be added to the system.",
+            "display": "Bypass exclusion list",
+            "name": "feedBypassExclusionList",
+            "required": false,
+            "type": 8,
+            "defaultvalue": "true",
+            "value": "true"
+        },
+        {
+            "additionalinfo": "Timeout of the polling request in seconds.",
+            "defaultvalue": "20",
+            "display": "Request Timeout",
+            "name": "polling_timeout",
+            "required": false,
+            "type": 0,
+            "value": "20"
+        },
+        {
+            "additionalinfo": "Supports CSV values.",
+            "display": "Tags",
+            "name": "feedTags",
+            "required": false,
+            "type": 0,
+            "value": "allow"
+        }
+    ],
+    "brand": "Cloudflare Feed",
+    "canSample": true,
+    "category": "Data Enrichment & Threat Intelligence",
+    "version": 1,
+    "isIntegrationScript": true,
+    "isLongRunning": false,
+    "passwordProtected": false,
+    "mappingId": "",
+    "incomingMapperId": "",
+    "outgoingMapperId": ""
+}

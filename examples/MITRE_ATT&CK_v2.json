@@ -1,1 +1,264 @@
-{"name": "placeholder", "id": "", "engine": "", "engineGroup": "", "defaultIgnore": false, "configuration": {"sortValues": null, "display": "MITRE ATT&CK Feed v2", "canGetSamples": true, "brand": "", "shouldCommit": false, "hidden": false, "fromServerVersion": "", "propagationLabels": [], "name": "MITRE ATT&CK v2", "vcShouldKeepItemLegacyProdMachine": false, "system": true, "commitMessage": "", "vcShouldIgnore": false, "packPropagationLabels": ["all"], "configuration": [{"defaultvalue": "true", "display": "Fetch indicators", "name": "feed", "required": false, "type": 8, "value": "true"}, {"additionalinfo": "Reliability of the source providing the intelligence data", "defaultvalue": "A - Completely reliable", "display": "Source Reliability", "name": "feedReliability", "options": ["A - Completely reliable", "B - Usually reliable", "C - Fairly reliable", "D - Not usually reliable", "E - Unreliable", "F - Reliability cannot be judged"], "required": true, "type": 15, "value": "A - Completely reliable"}, {"defaultvalue": "indicatorType", "display": "", "name": "feedExpirationPolicy", "options": ["never", "interval", "indicatorType", "suddenDeath"], "required": false, "type": 17, "value": "indicatorType"}, {"defaultvalue": "20160", "display": "", "name": "feedExpirationInterval", "required": false, "type": 1, "value": "20160"}, {"defaultvalue": "240", "display": "Feed Fetch Interval", "name": "feedFetchInterval", "required": false, "type": 19, "value": "240"}, {"additionalinfo": "When selected, the exclusion list is ignored for indicators from this feed. This means that if an indicator from this feed is on the exclusion list, the indicator might still be added to the system.", "defaultvalue": "false", "display": "Bypass exclusion list", "name": "feedBypassExclusionList", "required": false, "type": 8, "value": "false"}, {"defaultvalue": "false", "display": "Trust any certificate (not secure)", "name": "insecure", "required": false, "type": 8, "value": "false"}, {"defaultvalue": "true", "display": "Create relationships", "name": "create_relationships", "required": false, "type": 8, "value": "true"}], "version": 1, "icon": "", "toServerVersion": "", "id": "MITRE ATT&CK v2", "image": "", "description": "Use the MITRE ATT&CK\u00ae feed to fetch MITRE\u2019s Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK\u00ae) content. MITRE ATT&CK\u00ae is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations. The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.", "category": "Data Enrichment & Threat Intelligence", "integrationScript": {"isRemoteSyncOut": false, "longRunning": false, "commands": [{"arguments": [{"default": false, "defaultValue": "10", "description": "The maximum number of indicators to return. The default is 10.", "isArray": false, "name": "limit", "required": true, "secret": false}, {"auto": "PREDEFINED", "default": false, "defaultValue": "False", "description": "Output in raw JSON format. Can be \"True\" or \"False\". The default is \"False\".", "isArray": false, "name": "raw", "predefined": ["False", "True"], "required": false, "secret": false}], "deprecated": false, "description": "Retreives a limited number of the indicators.", "execution": false, "name": "mitre-get-indicators"}, {"deprecated": false, "description": "Shows the feed names and IDs from TAXII.", "execution": false, "name": "mitre-show-feeds"}], "longRunningPortMapping": false, "isFetchCredentials": false, "runOnce": false, "isRemoteSyncIn": false, "isFetch": false, "isMappable": false, "isFetchSamples": false, "subtype": "", "type": "python", "feed": false}, "instances": []}, "enabled": "true", "propagationLabels": ["all"], "data": [{"defaultvalue": "true", "display": "Fetch indicators", "name": "feed", "required": false, "type": 8, "value": "true"}, {"additionalinfo": "Reliability of the source providing the intelligence data", "defaultvalue": "A - Completely reliable", "display": "Source Reliability", "name": "feedReliability", "options": ["A - Completely reliable", "B - Usually reliable", "C - Fairly reliable", "D - Not usually reliable", "E - Unreliable", "F - Reliability cannot be judged"], "required": true, "type": 15, "value": "A - Completely reliable"}, {"defaultvalue": "indicatorType", "display": "", "name": "feedExpirationPolicy", "options": ["never", "interval", "indicatorType", "suddenDeath"], "required": false, "type": 17, "value": "indicatorType"}, {"defaultvalue": "20160", "display": "", "name": "feedExpirationInterval", "required": false, "type": 1, "value": "20160"}, {"defaultvalue": "240", "display": "Feed Fetch Interval", "name": "feedFetchInterval", "required": false, "type": 19, "value": "240"}, {"additionalinfo": "When selected, the exclusion list is ignored for indicators from this feed. This means that if an indicator from this feed is on the exclusion list, the indicator might still be added to the system.", "defaultvalue": "false", "display": "Bypass exclusion list", "name": "feedBypassExclusionList", "required": false, "type": 8, "value": "false"}, {"defaultvalue": "false", "display": "Trust any certificate (not secure)", "name": "insecure", "required": false, "type": 8, "value": "false"}, {"defaultvalue": "true", "display": "Create relationships", "name": "create_relationships", "required": false, "type": 8, "value": "true"}], "brand": "MITRE ATT&CK v2", "canSample": true, "category": "Data Enrichment & Threat Intelligence", "version": 1, "isIntegrationScript": true, "isLongRunning": false, "passwordProtected": false, "mappingId": "", "incomingMapperId": "", "outgoingMapperId": ""}
+{
+    "name": "placeholder",
+    "id": "",
+    "engine": "",
+    "engineGroup": "",
+    "defaultIgnore": false,
+    "configuration": {
+        "sortValues": null,
+        "display": "MITRE ATT&CK Feed v2",
+        "canGetSamples": true,
+        "brand": "",
+        "shouldCommit": false,
+        "hidden": false,
+        "fromServerVersion": "",
+        "propagationLabels": [],
+        "name": "MITRE ATT&CK v2",
+        "vcShouldKeepItemLegacyProdMachine": false,
+        "system": true,
+        "commitMessage": "",
+        "vcShouldIgnore": false,
+        "packPropagationLabels": [
+            "all"
+        ],
+        "configuration": [
+            {
+                "defaultvalue": "true",
+                "display": "Fetch indicators",
+                "name": "feed",
+                "required": false,
+                "type": 8,
+                "value": "true"
+            },
+            {
+                "additionalinfo": "Reliability of the source providing the intelligence data",
+                "defaultvalue": "A - Completely reliable",
+                "display": "Source Reliability",
+                "name": "feedReliability",
+                "options": [
+                    "A - Completely reliable",
+                    "B - Usually reliable",
+                    "C - Fairly reliable",
+                    "D - Not usually reliable",
+                    "E - Unreliable",
+                    "F - Reliability cannot be judged"
+                ],
+                "required": true,
+                "type": 15,
+                "value": "A - Completely reliable"
+            },
+            {
+                "defaultvalue": "indicatorType",
+                "display": "",
+                "name": "feedExpirationPolicy",
+                "options": [
+                    "never",
+                    "interval",
+                    "indicatorType",
+                    "suddenDeath"
+                ],
+                "required": false,
+                "type": 17,
+                "value": "indicatorType"
+            },
+            {
+                "defaultvalue": "20160",
+                "display": "",
+                "name": "feedExpirationInterval",
+                "required": false,
+                "type": 1,
+                "value": "20160"
+            },
+            {
+                "defaultvalue": "240",
+                "display": "Feed Fetch Interval",
+                "name": "feedFetchInterval",
+                "required": false,
+                "type": 19,
+                "value": "240"
+            },
+            {
+                "additionalinfo": "When selected, the exclusion list is ignored for indicators from this feed. This means that if an indicator from this feed is on the exclusion list, the indicator might still be added to the system.",
+                "defaultvalue": "false",
+                "display": "Bypass exclusion list",
+                "name": "feedBypassExclusionList",
+                "required": false,
+                "type": 8,
+                "value": "false"
+            },
+            {
+                "defaultvalue": "false",
+                "display": "Trust any certificate (not secure)",
+                "name": "insecure",
+                "required": false,
+                "type": 8,
+                "value": "false"
+            },
+            {
+                "defaultvalue": "true",
+                "display": "Create relationships",
+                "name": "create_relationships",
+                "required": false,
+                "type": 8,
+                "value": "true"
+            }
+        ],
+        "version": 1,
+        "icon": "",
+        "toServerVersion": "",
+        "id": "MITRE ATT&CK v2",
+        "image": "",
+        "description": "Use the MITRE ATT&CK\u00ae feed to fetch MITRE\u2019s Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK\u00ae) content. MITRE ATT&CK\u00ae is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations. The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.",
+        "category": "Data Enrichment & Threat Intelligence",
+        "integrationScript": {
+            "isRemoteSyncOut": false,
+            "longRunning": false,
+            "commands": [
+                {
+                    "arguments": [
+                        {
+                            "default": false,
+                            "defaultValue": "10",
+                            "description": "The maximum number of indicators to return. The default is 10.",
+                            "isArray": false,
+                            "name": "limit",
+                            "required": true,
+                            "secret": false
+                        },
+                        {
+                            "auto": "PREDEFINED",
+                            "default": false,
+                            "defaultValue": "False",
+                            "description": "Output in raw JSON format. Can be \"True\" or \"False\". The default is \"False\".",
+                            "isArray": false,
+                            "name": "raw",
+                            "predefined": [
+                                "False",
+                                "True"
+                            ],
+                            "required": false,
+                            "secret": false
+                        }
+                    ],
+                    "deprecated": false,
+                    "description": "Retreives a limited number of the indicators.",
+                    "execution": false,
+                    "name": "mitre-get-indicators"
+                },
+                {
+                    "deprecated": false,
+                    "description": "Shows the feed names and IDs from TAXII.",
+                    "execution": false,
+                    "name": "mitre-show-feeds"
+                }
+            ],
+            "longRunningPortMapping": false,
+            "isFetchCredentials": false,
+            "runOnce": false,
+            "isRemoteSyncIn": false,
+            "isFetch": false,
+            "isMappable": false,
+            "isFetchSamples": false,
+            "subtype": "",
+            "type": "python",
+            "feed": false
+        },
+        "instances": []
+    },
+    "enabled": "true",
+    "propagationLabels": [
+        "all"
+    ],
+    "data": [
+        {
+            "defaultvalue": "true",
+            "display": "Fetch indicators",
+            "name": "feed",
+            "required": false,
+            "type": 8,
+            "value": "true"
+        },
+        {
+            "additionalinfo": "Reliability of the source providing the intelligence data",
+            "defaultvalue": "A - Completely reliable",
+            "display": "Source Reliability",
+            "name": "feedReliability",
+            "options": [
+                "A - Completely reliable",
+                "B - Usually reliable",
+                "C - Fairly reliable",
+                "D - Not usually reliable",
+                "E - Unreliable",
+                "F - Reliability cannot be judged"
+            ],
+            "required": true,
+            "type": 15,
+            "value": "A - Completely reliable"
+        },
+        {
+            "defaultvalue": "indicatorType",
+            "display": "",
+            "name": "feedExpirationPolicy",
+            "options": [
+                "never",
+                "interval",
+                "indicatorType",
+                "suddenDeath"
+            ],
+            "required": false,
+            "type": 17,
+            "value": "indicatorType"
+        },
+        {
+            "defaultvalue": "20160",
+            "display": "",
+            "name": "feedExpirationInterval",
+            "required": false,
+            "type": 1,
+            "value": "20160"
+        },
+        {
+            "defaultvalue": "240",
+            "display": "Feed Fetch Interval",
+            "name": "feedFetchInterval",
+            "required": false,
+            "type": 19,
+            "value": "240"
+        },
+        {
+            "additionalinfo": "When selected, the exclusion list is ignored for indicators from this feed. This means that if an indicator from this feed is on the exclusion list, the indicator might still be added to the system.",
+            "defaultvalue": "false",
+            "display": "Bypass exclusion list",
+            "name": "feedBypassExclusionList",
+            "required": false,
+            "type": 8,
+            "value": "false"
+        },
+        {
+            "defaultvalue": "false",
+            "display": "Trust any certificate (not secure)",
+            "name": "insecure",
+            "required": false,
+            "type": 8,
+            "value": "false"
+        },
+        {
+            "defaultvalue": "true",
+            "display": "Create relationships",
+            "name": "create_relationships",
+            "required": false,
+            "type": 8,
+            "value": "true"
+        }
+    ],
+    "brand": "MITRE ATT&CK v2",
+    "canSample": true,
+    "category": "Data Enrichment & Threat Intelligence",
+    "version": 1,
+    "isIntegrationScript": true,
+    "isLongRunning": false,
+    "passwordProtected": false,
+    "mappingId": "",
+    "incomingMapperId": "",
+    "outgoingMapperId": ""
+}

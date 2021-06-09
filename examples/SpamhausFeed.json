@@ -1,1 +1,294 @@
-{"name": "placeholder", "id": "", "engine": "", "engineGroup": "", "defaultIgnore": false, "configuration": {"sortValues": null, "display": "Spamhaus Feed", "canGetSamples": true, "brand": "", "shouldCommit": false, "hidden": false, "fromServerVersion": "", "propagationLabels": [], "name": "SpamhausFeed", "vcShouldKeepItemLegacyProdMachine": false, "system": true, "commitMessage": "", "vcShouldIgnore": false, "packPropagationLabels": ["all"], "configuration": [{"defaultvalue": "https://www.spamhaus.org/drop/drop.txt", "display": "Services", "name": "url", "options": ["https://www.spamhaus.org/drop/edrop.txt", "https://www.spamhaus.org/drop/drop.txt"], "required": false, "type": 16, "value": ["https://www.spamhaus.org/drop/drop.txt"]}, {"defaultvalue": "true", "display": "Fetch indicators", "name": "feed", "required": false, "type": 8, "value": "true"}, {"additionalinfo": "Indicators from this integration instance will be marked with this reputation", "defaultvalue": "Bad", "display": "Indicator Reputation", "name": "feedReputation", "options": ["None", "Good", "Suspicious", "Bad"], "required": false, "type": 18, "value": "Bad"}, {"additionalinfo": "Reliability of the source providing the intelligence data", "defaultvalue": "B - Usually reliable", "display": "Source Reliability", "name": "feedReliability", "options": ["A - Completely reliable", "B - Usually reliable", "C - Fairly reliable", "D - Not usually reliable", "E - Unreliable", "F - Reliability cannot be judged"], "required": true, "type": 15, "value": "B - Usually reliable"}, {"defaultvalue": "indicatorType", "display": "", "name": "feedExpirationPolicy", "options": ["never", "interval", "indicatorType", "suddenDeath"], "required": false, "type": 17, "value": "indicatorType"}, {"defaultvalue": "20160", "display": "", "name": "feedExpirationInterval", "required": false, "type": 1, "value": "20160"}, {"defaultvalue": "60", "display": "Feed Fetch Interval", "name": "feedFetchInterval", "required": false, "type": 19, "value": "60"}, {"additionalinfo": "Supports CSV values.", "display": "Tags", "name": "feedTags", "required": false, "type": 0, "value": "block"}, {"additionalinfo": "Timeout of the polling request in seconds.", "defaultvalue": "20", "display": "Request Timeout", "name": "polling_timeout", "required": false, "type": 0, "value": "20"}], "version": 1, "icon": "", "toServerVersion": "", "id": "SpamhausFeed", "image": "", "description": "Use the Spamhaus feed integration to fetch indicators from the feed.", "category": "Data Enrichment & Threat Intelligence", "integrationScript": {"isRemoteSyncOut": false, "longRunning": false, "commands": [{"arguments": [{"default": false, "defaultValue": "50", "description": "The maximum number of results to return. The default value is 50.", "isArray": false, "name": "limit", "required": false, "secret": false}, {"default": false, "description": "The indicator type.", "isArray": false, "name": "indicator_type", "required": false, "secret": false}], "deprecated": false, "description": "Gets the feed indicators.", "execution": false, "name": "spamhaus-get-indicators"}], "longRunningPortMapping": false, "isFetchCredentials": false, "runOnce": false, "isRemoteSyncIn": false, "isFetch": false, "isMappable": false, "isFetchSamples": false, "subtype": "", "type": "python", "feed": false}, "instances": []}, "enabled": "true", "propagationLabels": ["all"], "data": [{"defaultvalue": "https://www.spamhaus.org/drop/drop.txt", "display": "Services", "name": "url", "options": ["https://www.spamhaus.org/drop/edrop.txt", "https://www.spamhaus.org/drop/drop.txt"], "required": false, "type": 16, "value": ["https://www.spamhaus.org/drop/drop.txt"]}, {"defaultvalue": "true", "display": "Fetch indicators", "name": "feed", "required": false, "type": 8, "value": "true"}, {"additionalinfo": "Indicators from this integration instance will be marked with this reputation", "defaultvalue": "Bad", "display": "Indicator Reputation", "name": "feedReputation", "options": ["None", "Good", "Suspicious", "Bad"], "required": false, "type": 18, "value": "Bad"}, {"additionalinfo": "Reliability of the source providing the intelligence data", "defaultvalue": "B - Usually reliable", "display": "Source Reliability", "name": "feedReliability", "options": ["A - Completely reliable", "B - Usually reliable", "C - Fairly reliable", "D - Not usually reliable", "E - Unreliable", "F - Reliability cannot be judged"], "required": true, "type": 15, "value": "B - Usually reliable"}, {"defaultvalue": "indicatorType", "display": "", "name": "feedExpirationPolicy", "options": ["never", "interval", "indicatorType", "suddenDeath"], "required": false, "type": 17, "value": "indicatorType"}, {"defaultvalue": "20160", "display": "", "name": "feedExpirationInterval", "required": false, "type": 1, "value": "20160"}, {"defaultvalue": "60", "display": "Feed Fetch Interval", "name": "feedFetchInterval", "required": false, "type": 19, "value": "60"}, {"additionalinfo": "Supports CSV values.", "display": "Tags", "name": "feedTags", "required": false, "type": 0, "value": "block"}, {"additionalinfo": "Timeout of the polling request in seconds.", "defaultvalue": "20", "display": "Request Timeout", "name": "polling_timeout", "required": false, "type": 0, "value": "20"}], "brand": "SpamhausFeed", "canSample": true, "category": "Data Enrichment & Threat Intelligence", "version": 1, "isIntegrationScript": true, "isLongRunning": false, "passwordProtected": false, "mappingId": "", "incomingMapperId": "", "outgoingMapperId": ""}
+{
+    "name": "placeholder",
+    "id": "",
+    "engine": "",
+    "engineGroup": "",
+    "defaultIgnore": false,
+    "configuration": {
+        "sortValues": null,
+        "display": "Spamhaus Feed",
+        "canGetSamples": true,
+        "brand": "",
+        "shouldCommit": false,
+        "hidden": false,
+        "fromServerVersion": "",
+        "propagationLabels": [],
+        "name": "SpamhausFeed",
+        "vcShouldKeepItemLegacyProdMachine": false,
+        "system": true,
+        "commitMessage": "",
+        "vcShouldIgnore": false,
+        "packPropagationLabels": [
+            "all"
+        ],
+        "configuration": [
+            {
+                "defaultvalue": "https://www.spamhaus.org/drop/drop.txt",
+                "display": "Services",
+                "name": "url",
+                "options": [
+                    "https://www.spamhaus.org/drop/edrop.txt",
+                    "https://www.spamhaus.org/drop/drop.txt"
+                ],
+                "required": false,
+                "type": 16,
+                "value": [
+                    "https://www.spamhaus.org/drop/drop.txt"
+                ]
+            },
+            {
+                "defaultvalue": "true",
+                "display": "Fetch indicators",
+                "name": "feed",
+                "required": false,
+                "type": 8,
+                "value": "true"
+            },
+            {
+                "additionalinfo": "Indicators from this integration instance will be marked with this reputation",
+                "defaultvalue": "Bad",
+                "display": "Indicator Reputation",
+                "name": "feedReputation",
+                "options": [
+                    "None",
+                    "Good",
+                    "Suspicious",
+                    "Bad"
+                ],
+                "required": false,
+                "type": 18,
+                "value": "Bad"
+            },
+            {
+                "additionalinfo": "Reliability of the source providing the intelligence data",
+                "defaultvalue": "B - Usually reliable",
+                "display": "Source Reliability",
+                "name": "feedReliability",
+                "options": [
+                    "A - Completely reliable",
+                    "B - Usually reliable",
+                    "C - Fairly reliable",
+                    "D - Not usually reliable",
+                    "E - Unreliable",
+                    "F - Reliability cannot be judged"
+                ],
+                "required": true,
+                "type": 15,
+                "value": "B - Usually reliable"
+            },
+            {
+                "defaultvalue": "indicatorType",
+                "display": "",
+                "name": "feedExpirationPolicy",
+                "options": [
+                    "never",
+                    "interval",
+                    "indicatorType",
+                    "suddenDeath"
+                ],
+                "required": false,
+                "type": 17,
+                "value": "indicatorType"
+            },
+            {
+                "defaultvalue": "20160",
+                "display": "",
+                "name": "feedExpirationInterval",
+                "required": false,
+                "type": 1,
+                "value": "20160"
+            },
+            {
+                "defaultvalue": "60",
+                "display": "Feed Fetch Interval",
+                "name": "feedFetchInterval",
+                "required": false,
+                "type": 19,
+                "value": "60"
+            },
+            {
+                "additionalinfo": "Supports CSV values.",
+                "display": "Tags",
+                "name": "feedTags",
+                "required": false,
+                "type": 0,
+                "value": "block"
+            },
+            {
+                "additionalinfo": "Timeout of the polling request in seconds.",
+                "defaultvalue": "20",
+                "display": "Request Timeout",
+                "name": "polling_timeout",
+                "required": false,
+                "type": 0,
+                "value": "20"
+            }
+        ],
+        "version": 1,
+        "icon": "",
+        "toServerVersion": "",
+        "id": "SpamhausFeed",
+        "image": "",
+        "description": "Use the Spamhaus feed integration to fetch indicators from the feed.",
+        "category": "Data Enrichment & Threat Intelligence",
+        "integrationScript": {
+            "isRemoteSyncOut": false,
+            "longRunning": false,
+            "commands": [
+                {
+                    "arguments": [
+                        {
+                            "default": false,
+                            "defaultValue": "50",
+                            "description": "The maximum number of results to return. The default value is 50.",
+                            "isArray": false,
+                            "name": "limit",
+                            "required": false,
+                            "secret": false
+                        },
+                        {
+                            "default": false,
+                            "description": "The indicator type.",
+                            "isArray": false,
+                            "name": "indicator_type",
+                            "required": false,
+                            "secret": false
+                        }
+                    ],
+                    "deprecated": false,
+                    "description": "Gets the feed indicators.",
+                    "execution": false,
+                    "name": "spamhaus-get-indicators"
+                }
+            ],
+            "longRunningPortMapping": false,
+            "isFetchCredentials": false,
+            "runOnce": false,
+            "isRemoteSyncIn": false,
+            "isFetch": false,
+            "isMappable": false,
+            "isFetchSamples": false,
+            "subtype": "",
+            "type": "python",
+            "feed": false
+        },
+        "instances": []
+    },
+    "enabled": "true",
+    "propagationLabels": [
+        "all"
+    ],
+    "data": [
+        {
+            "defaultvalue": "https://www.spamhaus.org/drop/drop.txt",
+            "display": "Services",
+            "name": "url",
+            "options": [
+                "https://www.spamhaus.org/drop/edrop.txt",
+                "https://www.spamhaus.org/drop/drop.txt"
+            ],
+            "required": false,
+            "type": 16,
+            "value": [
+                "https://www.spamhaus.org/drop/drop.txt"
+            ]
+        },
+        {
+            "defaultvalue": "true",
+            "display": "Fetch indicators",
+            "name": "feed",
+            "required": false,
+            "type": 8,
+            "value": "true"
+        },
+        {
+            "additionalinfo": "Indicators from this integration instance will be marked with this reputation",
+            "defaultvalue": "Bad",
+            "display": "Indicator Reputation",
+            "name": "feedReputation",
+            "options": [
+                "None",
+                "Good",
+                "Suspicious",
+                "Bad"
+            ],
+            "required": false,
+            "type": 18,
+            "value": "Bad"
+        },
+        {
+            "additionalinfo": "Reliability of the source providing the intelligence data",
+            "defaultvalue": "B - Usually reliable",
+            "display": "Source Reliability",
+            "name": "feedReliability",
+            "options": [
+                "A - Completely reliable",
+                "B - Usually reliable",
+                "C - Fairly reliable",
+                "D - Not usually reliable",
+                "E - Unreliable",
+                "F - Reliability cannot be judged"
+            ],
+            "required": true,
+            "type": 15,
+            "value": "B - Usually reliable"
+        },
+        {
+            "defaultvalue": "indicatorType",
+            "display": "",
+            "name": "feedExpirationPolicy",
+            "options": [
+                "never",
+                "interval",
+                "indicatorType",
+                "suddenDeath"
+            ],
+            "required": false,
+            "type": 17,
+            "value": "indicatorType"
+        },
+        {
+            "defaultvalue": "20160",
+            "display": "",
+            "name": "feedExpirationInterval",
+            "required": false,
+            "type": 1,
+            "value": "20160"
+        },
+        {
+            "defaultvalue": "60",
+            "display": "Feed Fetch Interval",
+            "name": "feedFetchInterval",
+            "required": false,
+            "type": 19,
+            "value": "60"
+        },
+        {
+            "additionalinfo": "Supports CSV values.",
+            "display": "Tags",
+            "name": "feedTags",
+            "required": false,
+            "type": 0,
+            "value": "block"
+        },
+        {
+            "additionalinfo": "Timeout of the polling request in seconds.",
+            "defaultvalue": "20",
+            "display": "Request Timeout",
+            "name": "polling_timeout",
+            "required": false,
+            "type": 0,
+            "value": "20"
+        }
+    ],
+    "brand": "SpamhausFeed",
+    "canSample": true,
+    "category": "Data Enrichment & Threat Intelligence",
+    "version": 1,
+    "isIntegrationScript": true,
+    "isLongRunning": false,
+    "passwordProtected": false,
+    "mappingId": "",
+    "incomingMapperId": "",
+    "outgoingMapperId": ""
+}
