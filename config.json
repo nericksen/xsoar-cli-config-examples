@@ -1,0 +1,217 @@
+{
+    "cvesearch": {
+        "config": "content/Packs/CVESearch/Integrations/CVESearchV2/CVESearchV2.yml",
+        "code": "content/Packs/CVESearch/Integrations/CVESearchV2/CVESearchV2.py",
+        "path": "content/Packs/CVESearch/Integrations/CVESearchV2",
+        "params": {
+            "url": "https://cve.circl.lu/api/",
+            "insecure": "true"
+        },
+        "version": "",
+        "image_name": "cvesearch-xsoar"
+    },
+    "feedfeodotracker": {
+        "config": "content/Packs/FeedFeodoTracker/Integrations/FeedFeodoTrackerIPBlocklist/FeedFeodoTrackerIPBlocklist.yml",
+        "code": "content/Packs/FeedFeodoTracker/Integrations/FeedFeodoTrackerIPBlocklist/FeedFeodoTrackerIPBlocklist.py",
+        "path": "content/Packs/FeedFeodoTracker/Integrations/FeedFeodoTrackerIPBlocklist",
+        "params": {
+            "feed": "false",
+            "feed_source": "Currently Active,Last 30 Days",
+            "selectedValues": [
+                "Currently Active",
+                "Last 30 Days"
+            ],
+            "feedReputation": "Bad",
+            "feedReliability": "B - Usually reliable",
+            "feedExpirationPolicy": "suddenDeath",
+            "feedExpirationInterval": "20160",
+            "feedTags": "block",
+            "feedFetchInterval": "60",
+            "create_relationships": "true"
+        },
+        "version": "",
+        "image_name": "feedfeodotracker-xsoar"
+    },
+    "feedtalos": {
+        "config": "content/Packs/FeedTalos/Integrations/FeedTalos/FeedTalos.yml",
+        "code": "content/Packs/FeedTalos/Integrations/FeedTalos/FeedTalos.py",
+        "path": "content/Packs/FeedTalos/Integrations/FeedTalos",
+        "params": {
+            "feed": "true",
+            "url": "https://talosintelligence.com/documents/ip-blacklist",
+            "feedReputation": "Bad",
+            "feedReliability": "B - Usually reliable",
+            "feedExpirationPolicy": "suddenDeath",
+            "feedTags": "block",
+            "feedExpirationInterval": "20160",
+            "feedFetchInterval": "30",
+            "feedBypassExclusionList": "true"
+        },
+        "version": "",
+        "image_name": "feedtalos-xsoar"
+    },
+    "feedmitreattackv2": {
+        "config": "content/Packs/FeedMitreAttackv2/Integrations/FeedMitreAttackv2/FeedMitreAttackv2.yml",
+        "code": "content/Packs/FeedMitreAttackv2/Integrations/FeedMitreAttackv2/FeedMitreAttackv2.py",
+        "path": "content/Packs/FeedMitreAttackv2/Integrations/FeedMitreAttackv2",
+        "params": {
+            "feed": "true",
+            "feedReliability": "A - Completely reliable",
+            "feedExpirationPolicy": "indicatorType",
+            "feedExpirationInterval": "20160",
+            "feedFetchInterval": "240",
+            "feedBypassExclusionList": "false",
+            "insecure": "false",
+            "create_relationships": "true"
+        },
+        "version": "",
+        "image_name": "feedmitreattackv2-xsoar"
+    },
+    "feedtorexitaddresses": {
+        "config": "content/Packs/FeedTorExitAddresses/Integrations/FeedTorExitAddresses/FeedTorExitAddresses.yml",
+        "code": "content/Packs/FeedTorExitAddresses/Integrations/FeedTorExitAddresses/FeedTorExitAddresses.py",
+        "path": "content/Packs/FeedTorExitAddresses/Integrations/FeedTorExitAddresses/",
+        "params": {
+            "feed": "true",
+            "feedReputation": "Suspicious",
+            "feedReliability": "A - Completely reliable",
+            "feedExpirationPolicy": "suddenDeath",
+            "feedTags": "block",
+            "feedExpirationInterval": "20160",
+            "feedFetchInterval": "10"
+        },
+        "version": "",
+        "image_name": "feedtorexitaddresses-xsoar"
+    },
+    "feedspamhaus": {
+        "config": "content/Packs/FeedSpamhaus/Integrations/FeedSpamhaus/FeedSpamhaus.yml",
+        "code": "content/Packs/FeedSpamhaus/Integrations/FeedSpamhaus/FeedSpamhaus.py",
+        "path": "content/Packs/FeedSpamhaus/Integrations/FeedSpamhaus/",
+        "params": {
+            "url": "https://www.spamhaus.org/drop/drop.txt",
+            "feed": "true",
+            "feedReputation": "Bad",
+            "feedReliability": "B - Usually reliable",
+            "feedTags": "block",
+            "feedExpirationPolicy": "indicatorType",
+            "feedExpirationInterval": "20160",
+            "feedFetchInterval": "60",
+            "polling_timeout": "20"
+        },
+        "version": "",
+        "image_name": "feedspamhaus-xsoar"
+    },
+    "feedcloudflare": {
+        "config": "content/Packs/FeedCloudflare/Integrations/FeedCloudflare/FeedCloudflare.yml",
+        "code": "content/Packs/FeedCloudflare/Integrations/FeedCloudflare/FeedCloudflare.py",
+        "path": "content/Packs/FeedCloudflare/Integrations/FeedCloudflare/",
+        "params": {
+            "url": "https://www.cloudflare.com/ips-v4",
+            "selectedValues": [
+                "https://www.cloudflare.com/ips-v4"
+            ],
+            "feed": "true",
+            "feedReputation": "Good",
+            "feedReliability": "A - Completely reliable",
+            "feedExpirationPolicy": "indicatorType",
+            "feedExpirationInterval": "20160",
+            "feedFetchInterval": "5",
+            "feedTags": "allow",
+            "feedBypassExclusionList": "true",
+            "polling_timeout": "20"
+        },
+        "version": "",
+        "image_name": "feedcloudflare-xsoar"
+    },
+    "feedoffice365": {
+        "config": "content/Packs/FeedOffice365/Integrations/FeedOffice365/FeedOffice365.yml",
+        "code": "content/Packs/FeedOffice365/Integrations/FeedOffice365/FeedOffice365.py",
+        "path": "content/Packs/FeedOffice365/Integrations/FeedOffice365/",
+        "params": {
+            "feed": "true",
+            "regions": "Worldwide",
+            "selectedValues": [
+                "Exchange"
+            ],
+            "services": "Exchange",
+            "feedReputation": "Good",
+            "feedReliability": "A - Completely reliable",
+            "feedExpirationPolicy": "suddenDeath",
+            "feedExpirationInterval": "20160",
+            "feedTags": "allow",
+            "feedFetchInterval": "30",
+            "feedBypassExclusionList": "true"
+        },
+        "version": "",
+        "image_name": "feedoffice365-xsoar"
+    },
+    "feedaws": {
+        "config": "content/Packs/FeedAWS/Integrations/FeedAWS/FeedAWS.yml",
+        "code": "content/Packs/FeedAWS/Integrations/FeedAWS/FeedAWS.py",
+        "path": "content/Packs/FeedAWS/Integrations/FeedAWS/",
+        "params": {
+            "services": "AMAZON,EC2,S3",
+            "selectedValues": [
+                "us-west-2"
+            ],
+            "regions": "us-west-2",
+            "feed": "true",
+            "feedReputation": "Good",
+            "feedReliability": "A - Completely reliable",
+            "feedExpirationPolicy": "indicatorType",
+            "feedFetchInterval": "5",
+            "feedTags": "allow",
+            "feedBypassExclusionList": "true"
+        },
+        "version": "",
+        "image_name": "feedaws-xsoar"
+    },
+    "feedazure": {
+        "config": "content/Packs/FeedAzure/Integrations/FeedAzure/FeedAzure.yml",
+        "code": "content/Packs/FeedAzure/Integrations/FeedAzure/FeedAzure.py",
+        "path": "content/Packs/FeedAzure/Integrations/FeedAzure/",
+        "params": {
+            "feed": "true",
+            "feedReputation": "Good",
+            "feedReliability": "A - Completely reliable",
+            "feedExpirationPolicy": "indicatorType",
+            "feedExpirationInterval": "20160",
+            "feedFetchInterval": "5",
+            "feedBypassExclusionList": "true",
+            "regions": "norwaye,norwayw,westus,westus2,eastus,eastus2",
+            "selectedValues": [
+                "AzureAD"
+            ],
+            "services": "AzureAD",
+            "feedTags": "allow",
+            "polling_timeout": "20"
+        },
+        "version": "",
+        "image_name": "feedazure-xsoar"
+    },
+    "whois": {
+        "config": "content/Packs/Whois/Integrations/Whois/Whois.yml",
+        "code": "content/Packs/Whois/Integrations/Whois/Whois.py",
+        "path": "content/Packs/Whois/Integrations/Whois",
+        "params": {
+            "integrationReliability": "B - Usually reliable"
+        },
+        "version": "",
+        "image_name": "whois-xsoar"
+    },
+    "ipinfo": {
+        "config": "content/Packs/ipinfo/Integrations/ipinfo_v2/ipinfo_v2.yml",
+        "code": "content/Packs/ipinfo/Integrations/ipinfo_v2/ipinfo_v2.py",
+        "path": "content/Packs/ipinfo/Integrations/ipinfo_v2",
+        "params": {
+            "credentials": {
+                "identifier": "",
+                "password": ""
+            },
+            "integrationReliability": "C - Fairly reliable",
+            "base_url": "https://ipinfo.io"
+        },
+        "version": "",
+        "image_name": "ipinfo-xsoar"
+    }
+}
