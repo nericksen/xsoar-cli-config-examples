@@ -1,0 +1,175 @@
+{
+    "name": "placeholder",
+    "id": "",
+    "engine": "",
+    "engineGroup": "",
+    "defaultIgnore": false,
+    "configuration": {
+        "sortValues": null,
+        "display": "CVE Search v2",
+        "canGetSamples": true,
+        "brand": "",
+        "shouldCommit": false,
+        "hidden": false,
+        "fromServerVersion": "",
+        "propagationLabels": [],
+        "name": "CVE Search v2",
+        "vcShouldKeepItemLegacyProdMachine": false,
+        "system": true,
+        "commitMessage": "",
+        "vcShouldIgnore": false,
+        "packPropagationLabels": [
+            "all"
+        ],
+        "configuration": [
+            {
+                "display": "Server URL",
+                "name": "url",
+                "defaultvalue": "https://cve.circl.lu/api/",
+                "type": 0,
+                "required": true,
+                "value": "https://cve.circl.lu/api/"
+            },
+            {
+                "display": "Trust any certificate (not secure)",
+                "name": "insecure",
+                "type": 8,
+                "required": false,
+                "value": "true"
+            }
+        ],
+        "version": 1,
+        "icon": "",
+        "toServerVersion": "",
+        "id": "CVE Search v2",
+        "image": "",
+        "description": "Searches for CVE information using circl.lu.",
+        "category": "Vulnerability Management",
+        "integrationScript": {
+            "isRemoteSyncOut": false,
+            "longRunning": false,
+            "commands": [
+                {
+                    "name": "cve-latest",
+                    "arguments": [
+                        {
+                            "name": "limit",
+                            "required": false,
+                            "default": false,
+                            "description": "The maximum number of CVEs to display."
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "contextPath": "CVE.ID",
+                            "description": "The ID of the CVE.",
+                            "type": "String"
+                        },
+                        {
+                            "contextPath": "CVE.CVSS",
+                            "description": "The CVSS score of the CVE.",
+                            "type": "number"
+                        },
+                        {
+                            "contextPath": "CVE.Published",
+                            "description": "The date the CVE was published.",
+                            "type": "Date"
+                        },
+                        {
+                            "contextPath": "CVE.Modified",
+                            "description": "The date that the CVE was last modified.",
+                            "type": "Date"
+                        },
+                        {
+                            "contextPath": "CVE.Description",
+                            "description": "The description of the CVE.",
+                            "type": "String"
+                        }
+                    ],
+                    "description": "Returns the latest updated CVEs."
+                },
+                {
+                    "name": "cve",
+                    "arguments": [
+                        {
+                            "name": "cve_id",
+                            "required": true,
+                            "default": true,
+                            "description": "The CVE ID. For example: CVE-2014-1234."
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "contextPath": "CVE.ID",
+                            "description": "The ID of the CVE.",
+                            "type": "String"
+                        },
+                        {
+                            "contextPath": "CVE.CVSS",
+                            "description": "The CVSS score of the CVE.",
+                            "type": "number"
+                        },
+                        {
+                            "contextPath": "CVE.Published",
+                            "description": "The date the CVE was published.",
+                            "type": "Date"
+                        },
+                        {
+                            "contextPath": "CVE.Modified",
+                            "description": "The date that the CVE was last modified.",
+                            "type": "Date"
+                        },
+                        {
+                            "contextPath": "CVE.Description",
+                            "description": "The description of the CVE.",
+                            "type": "String"
+                        }
+                    ],
+                    "description": "Returns CVE information by CVE ID."
+                }
+            ],
+            "longRunningPortMapping": false,
+            "isFetchCredentials": false,
+            "runOnce": false,
+            "isRemoteSyncIn": false,
+            "isFetch": false,
+            "isMappable": false,
+            "isFetchSamples": false,
+            "subtype": "",
+            "type": "python",
+            "feed": false
+        },
+        "instances": []
+    },
+    "enabled": "true",
+    "propagationLabels": [
+        "all"
+    ],
+    "data": [
+        {
+            "display": "Server URL",
+            "name": "url",
+            "defaultvalue": "https://cve.circl.lu/api/",
+            "type": 0,
+            "required": true,
+            "value": "https://cve.circl.lu/api/"
+        },
+        {
+            "display": "Trust any certificate (not secure)",
+            "name": "insecure",
+            "type": 8,
+            "required": false,
+            "value": "true"
+        }
+    ],
+    "brand": "CVE Search v2",
+    "canSample": true,
+    "category": "Vulnerability Management",
+    "version": 1,
+    "isIntegrationScript": true,
+    "isLongRunning": false,
+    "passwordProtected": false,
+    "mappingId": "",
+    "incomingMapperId": "",
+    "outgoingMapperId": ""
+}
